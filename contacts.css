@@ -1,0 +1,52 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+#wrapper{
+  margin: 0px auto;
+  width: 700px;
+  height: 500px;
+}
+
+#form_input{
+    width: 40%;
+    border: 1px solid black;
+    display: inline-block;
+
+}
+
+#form_input label{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#form_input #add_user{
+  margin-top: 20px;
+}
+
+#form_input #description{
+  width: 100%;
+}
+
+#form_output{
+  margin-left: 30px;
+  width: 30%;
+  display: inline-block;
+}
+
+#form_output #button_holder{
+  width: 100%;
+  display: inline-block;
+  border: 1px solid black;
+  height: 20px;
+}
+
+#form_output .new_button{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hidden_button{
+  display: none;
+}

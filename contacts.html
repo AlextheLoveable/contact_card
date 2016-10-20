@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link rel="stylesheet" href="contacts.css">
+    <meta charset="utf-8">
+    <title>contact adder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+          $('#add_user').click(function(){
+            $('#form_output').append('<div id="button_holder"><p class="new_button">'+$('#fname').val()+' '+$('#lname').val()+'</p></div>');
+            $('#button_holder').append('<p class="hidden_button">' + $('#description').val()+'</p>')
+          });
+          $(document).on('click', '.new_button', function(){
+            $('.new_button').hide();
+            $('.hidden_button').show();
+          })
+          $(document).on('click', '.hidden_button', function(){
+            $('.hidden_button').hide();
+            $('.new_button').show();
+          })
+
+        });
+    </script>
+  </head>
+  <body>
+      <div id='wrapper'>
+          <div id='form_input'>
+            <form>
+              <label>First Name: <input id='fname' type="text" name="name" placeholder=""></label>
+              <label>Last Name: <input id='lname' type="text" name="name" placeholder=""></label>
+              <label>Description: <input id='description' type="text" name="name" placeholder="Enter Description"></label>
+              <input id='add_user' type="button" name="name" value="Add User">
+            </form>
+          </div>
+          <div id='form_output'>
+
+          </div>
+      </div>
+  </body>
+</html>
